@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Issam REBAÏ 
+LISSI-SCTIC
+Paris EST-Creteil University (Paris 12)
+
+IUT de Créteil Vitry
+120-122, rue Paul Armangot
+94400 Vitry sur Seine (France)
+
+issam.rebai@u-pec.fr
+http://www.math-info.univ-paris5.fr/~rebai
+
+Tél : +33 1 41 80 73 82
+-->
+<sys:systems xmlns:sys="http://www.enstb.org/upas/system" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultSystem="ID_PI_Linky_System" class="TDPF" xsi:schemaLocation="http://www.enstb.org/upas/system http://recherche.telecom-bretagne.eu/upas/xsd/System.xsd">
+	<sys:controllers defaultController="id_pi_linky_Controller">
+		<sys:controller id="id_pi_linky_Controller" className="org.imt.atlantique.sss.upas.device.linky.controller.RaspberryLinkyController" name="Raspberry GPIO Controller" commandFile="file:./resources/Command_raspberry_linky.xml">
+			<sys:configData>
+				<sys:property name="com" value="COM33">Port serie sur lequel est branché la carte arduino</sys:property>
+				<sys:property name="speed" value="1200">Vitesse</sys:property>
+				<sys:property name="parity" value="even">Parité</sys:property>
+				<sys:property name="dataBit" value="7">Bits de données</sys:property>
+				<sys:property name="endBit" value="2">Bits de fin</sys:property>
+				<sys:property name="rts" value="false">Request To Send</sys:property>
+			</sys:configData>
+		</sys:controller>
+	</sys:controllers>
+	<sys:facades defaultFacade="id_pi_linky_Facade">
+		<sys:facade id="id_pi_linky_Facade" name="Raspberry Linky Facade">
+			<sys:dpws metadataFileType="xml" metadata="file:./resources/Raspberry_linkyMetadata.xml" enabled="true" deviceMetadataId="1">
+				<sys:services>
+					<sys:service state="on" name="ControlService" wsdl="http://recherche.telecom-bretagne.eu/upas/wsdl/ControlService.wsdl">
+						<sys:description>Service de contrôle du dispostif et de ses services.</sys:description>
+					</sys:service>
+					<sys:service state="on" name="NotificationService" wsdl="http://recherche.telecom-bretagne.eu/upas/wsdl/NotificationService.wsdl">
+						<sys:description>Service generique de notification d'événements</sys:description>
+					</sys:service>					
+				</sys:services>
+			</sys:dpws>
+			<sys:upnp metadata="description/tdpf/description.xml" deviceMetadataId="1" metadataFileType="UPnP_v1_0" enabled="false"/>
+		</sys:facade>
+	</sys:facades>
+	<sys:system id="ID_PI_Linky_System" state="on" name="Upas_raspberry-linky" enabled="true" useController="id_pi_linky_Controller" useFacade="id_pi_linky_Facade" commandClass="system">
+		<sys:description>Système de collecte des données du compteur lniky.</sys:description>
+	</sys:system>
+</sys:systems>

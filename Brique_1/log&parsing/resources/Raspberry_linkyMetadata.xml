@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Issam REBAÏ 
+LISSI-SCTIC
+Paris EST-Creteil University (Paris 12)
+
+IUT de Créteil Vitry
+120-122, rue Paul Armangot
+94400 Vitry sur Seine (France)
+
+issam.rebai@u-pec.fr
+http://www.math-info.univ-paris5.fr/~rebai
+
+Tél : +33 1 41 80 73 82
+-->
+<mt:metadata xmlns:mt="http://www.enstb.org/upas/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.enstb.org/upas/metadata http://recherche.telecom-bretagne.eu/upas/xsd/DPWSDeviceMetadata.xsd">
+	<mt:devices defaultDevice="1">
+		<mt:device id="1">
+			<mt:DeviceUuid class="dynamic" value="urn:uuid:63e9471b-7d79-4304-8697-60e683156cd5"/>
+			<mt:MetadataVersion value="1"/>
+			<mt:Types value="http://www.imt-atlantique.fr/upas/linky"/>
+			<mt:Types value="http://docs.oasis-open.org/ws-dd/ns/dpws/2009/01/Device"/>
+			<mt:Scopes value="http://enstb.org"/>
+			<mt:Scopes value="http://www.imt-atlantique.fr"/>
+			<mt:Scopes value="http://www.imt.fr"/>
+			<mt:Scopes value="http://www.ws4d.org"/>
+			<mt:ManufacturerUrl value="http://www.imt-atlantique.fr"/>
+			<mt:ManufacturerName language="en-US" value="Institut Mines-Telecom"/>
+			<mt:ManufacturerName language="fr-FR" value="Institut Mines-Telecom"/>
+			<mt:ModelName language="en-US" value="Linky Device"/>
+			<mt:ModelName language="fr-FR" value="Dispositif compteur Linky"/>
+			<mt:ModelNumber value="20200227"/>	
+			<mt:ModelUrl value="http://www.imt-atlantique.fr/upas/devices/linky/model"/>
+			<mt:PresentationUrl value="http://www.imt-atlantique.fr/upas/devices/linky/presentation.html"/>
+			<mt:FriendlyName language="en-US" value="Linky data collector"/>
+			<mt:FriendlyName language="fr-FR" value="Dispositif de collecte de données de linky"/>
+			<mt:FirmwareVersion value="1.1"/>
+			<mt:SerialNumber value="2020.02.27-13.00.00.1"/>
+		</mt:device>
+	</mt:devices>
+</mt:metadata>
